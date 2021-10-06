@@ -28,7 +28,12 @@ app.use('/users', usersRouter);
 
 //Api......................
 app.use("/api",authRouter); 
-mongoose.connect('mongodb://localhost:27017/whrool',{ useNewUrlParser: true ,useUnifiedTopology: true}).then(()=>{
+
+// mongoose.connect('mongodb://localhost:27017/tt',{ useNewUrlParser: true ,useUnifiedTopology: true}).then(()=>{
+//   console.log("Database connected...");
+// });
+
+mongoose.connect('mongodb+srv://r4h:r4h@cluster0.6bg9f.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{ useNewUrlParser: true ,useUnifiedTopology: true}).then(()=>{
   console.log("Database connected...");
 });
 
