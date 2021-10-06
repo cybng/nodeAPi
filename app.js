@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var mongoose =require("mongoose");
 var path = require('path');
 var env = require("dotenv");
 var cookieParser = require('cookie-parser');
@@ -26,7 +27,10 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 //Api......................
-app.use("/api",authRouter);
+app.use("/api",authRouter); 
+mongoose.connect('mongodb://localhost:27017/whrool',{ useNewUrlParser: true ,useUnifiedTopology: true}).then(()=>{
+  console.log("Database connected...");
+});
 
 
 // catch 404 and forward to error handler
