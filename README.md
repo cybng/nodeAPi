@@ -19,6 +19,6 @@
 
 
 
-<i>Loved the project? Please consider [donating](https://paypal.me/abhisheknaiidu) to help it improve!</i>
+
 
 </div>
